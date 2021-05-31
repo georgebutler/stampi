@@ -29,8 +29,8 @@ client.on('message', (msg) => {
   if (client.commands.has(command)) {
     try {
       client.commands.get(command).execute(msg, args)
-    } catch (error) {
-      console.error(error)
+    } catch (err) {
+      console.error(err)
       msg.reply('Whoops! Something went wrong!')
     }
   }
